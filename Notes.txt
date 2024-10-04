@@ -1,0 +1,49 @@
+
+# THIS WOULD ONLY SHOW UP IN THE API PART, NOT IN THE BACKEND
+GET '/item/1'
+
+{
+	"id": 1
+	"name": "Laptop X3000",
+	"price": 10000,
+	"store_id": 1,
+	"store": {
+		"id": 1,
+		"name": "Tech Shop"
+	}
+}
+
+
+-----------
+GET '/store/1'
+
+{
+	"id": 1,
+	"name": "Tech Shop",
+	"items": [
+		{
+			"id": 1,
+			"name": "Laptop X3000",
+			"price": 10000
+		},
+		{
+			"id": 2
+			"name": "Laptop X3000",
+			"price": 10000
+		}
+	]
+}
+
+
+
+# StoreModel - items(ItemModel)
+# ItemModel - stores(StoreModel)
+
+
+RECAP:
+1. Install Flask_SQLAlchemy
+2. Create models folder
+3. Create items and store models
+4. Setup relationship between items and stores
+5. Fix our schemas to be compatible with our database model
+6. Add sqlalchemy in our API App
